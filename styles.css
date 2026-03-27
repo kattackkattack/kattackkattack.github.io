@@ -1,0 +1,592 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition-duration: 180ms;
+}
+
+body {
+    margin: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--text-primary);
+    background-color: var(--background-primary);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.icon {
+    fill: var(--icon-primary);
+}
+
+
+/* главный контейнер */
+
+.page-content-container {
+    position: relative;
+    max-width: 1280px;
+    height: auto;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0 5rem;
+}
+
+
+/* полосы на фоне */
+
+.background-stripes {
+    background: linear-gradient(90deg, #0000 calc(100% - 1px), var(--border-stripes) 0);
+    background-size: calc((100% - 10rem + 5px)/4 - 1px) 100%;
+    background-position-x: 5rem;
+}
+
+
+
+
+
+
+/* colors ---------------------------------------- */
+
+
+:root{
+
+    /* background */
+  
+    --background-primary: #141415;
+    --background-tertiary:rgba(255, 255, 255, 0.05);
+     
+
+    /* text */
+  
+    --text-primary:#ffffff;
+    --text-secondary:rgba(255, 255, 255, 0.5);
+  
+
+    /* icon */
+  
+    --icon-primary:#ffffff;
+
+
+    /* border */
+    
+    --border-primary: rgba(255, 255, 255, 0.5);
+    --border-tertiary: rgba(255, 255, 255, 0.1);
+    --border-stripes: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
+
+/* font styles ----------------------------------- */
+
+
+h1 {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700,
+        "YTLC" 0;
+    font-size: 5rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 0.25%;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700,
+        "YTLC" 0;
+    font-size: 3.5rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 0.25%;
+}
+  
+h3 {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 800,
+        "YTLC" 0;
+    font-size: 2.5rem;
+    line-height: 140%; /* 140% */
+}
+
+h4 {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 700,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 140%; /* 140% */
+}
+
+.text-secondary-style {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 1%;
+    color: var(--text-secondary);
+}
+
+p {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 1%;
+}
+
+.h1-special {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-variation-settings:
+        "wdth" 700,
+        "YTLC" 1;
+    font-size: 5rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 0.25%;
+}
+
+.hero-text {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 2rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 0.5%;
+}
+
+a {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 1%;
+}
+
+
+
+
+
+
+/* elements -------------------------------------- */
+
+
+/* tags */
+
+.tag {
+    text-align: center;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0.375rem 0.75rem;
+    background-color: var(--background-tertiary);
+    border-radius: 1rem;
+}
+
+
+/* links ---------------------------------------- */
+
+
+a:hover {
+    opacity: 0.8;
+}
+
+
+/* link primary */
+
+.link-primary {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    align-items: center;
+    height: 2.875rem;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    padding: 0 0.75rem;
+    margin: 0;
+    border: 1px solid var(--border-primary);
+    border-radius: 1.1rem;
+}
+
+.link-primary p {
+    padding-bottom: 0.125rem;
+}
+
+.link-secondary {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: auto;
+    text-decoration-color: var(--border-primary);
+    color: var(--text-primary);
+}
+
+
+/* hr */
+
+.table-primary hr {
+    height: 1px;
+    margin: 0;
+    background-color: var(--border-tertiary);
+    border: none;
+}
+
+
+/* index - stripes 
+
+.background-stripes {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    padding: 0 5rem;
+}
+
+
+.background-stripes div {
+    background-color: var(--border-stripes);
+    width: 1px;
+    height: 100%;
+}
+*/
+
+/* index - hero */
+
+.hero-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.first-name {
+    margin-right: 1.25rem;
+}
+
+.last-name {
+    position: relative;
+}
+
+.brunch-icon {
+    position: absolute;
+    top: 0;
+    right: -1.2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 840px;
+    gap: 26px;
+    margin-bottom: 13.5rem;
+    padding-top: 10rem;
+}
+
+
+
+
+
+
+/* вёрстка --------------------------------------- */
+
+
+.h3-title {
+    margin-bottom: 6rem;
+}
+
+article {
+    margin-bottom: 10rem;
+}
+
+
+/* index - сетка навыков */
+
+.proficiency {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 6rem 0;
+    padding: 0;
+    row-gap: 2.5rem;
+    list-style-type: none;
+}
+
+.proficiency p {
+    text-wrap: balance;
+    padding-right: 2.5rem;
+}
+
+
+/* index - ценности и навыки */
+
+.principles-skills {
+    display: flex;
+    flex-direction: row;
+}
+
+.principles .text-secondary-style {
+    margin-bottom: 1.5rem;
+}
+
+.skills .text-secondary-style {
+    margin-bottom: 1.188rem;
+}
+    
+.principles-skills > div {
+    width: 50%;
+}
+
+.principles {
+    padding-right: 2.5rem;
+}
+
+
+/* index - облако тэгов */
+
+.skills-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* index - свяжитесь со мной */
+
+.connection .h3-title {
+    margin-bottom: 3rem;
+}
+
+.connection {
+    margin: 0;
+    padding-bottom: 10rem;
+}
+
+
+/* таблица */
+
+.table-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.table-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+}
+
+.table-row li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 50%;
+    list-style-type: none;
+}
+
+.table-row .link-primary {
+    margin-top: 0.5rem;
+}
+
+.table-row .table-cell-list {
+    gap: 1rem;
+}
+
+.table-row li:not(:last-child) {
+    padding-right: 2.5rem;
+}
+
+
+
+
+
+
+/* адаптив --------------------------------------- */
+
+
+/* планшеты -------------------------------------- */
+
+
+@media (width <= 1024px) {
+
+
+    /* index - сетка навыков */
+
+    .proficiency {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* мобильные устройства -------------------------- */
+
+
+@media (width <= 768px) {
+
+
+    /* шрифты */
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .h1-special {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .h3-title {
+        margin-bottom: 3rem;
+    }
+    
+
+    /* главный контейнер */
+
+    .page-content-container {
+        padding: 0 2rem;
+    }
+
+    article {
+        margin-bottom: 7rem;
+    }
+
+
+    /* полосы на фоне */
+
+    .background-stripes {
+        background: linear-gradient(90deg, #0000 calc(100% - 1px), var(--border-stripes) 0);
+        background-size: calc((100% - 4rem + 5px)/4 - 1px) 100%;
+        background-position-x: 2rem;
+    }
+
+
+    /* index - hero */
+
+    .hero {
+        padding-top: 7rem;
+        margin-bottom: 10rem;
+    }
+
+    .brunch-icon {
+        transform: scale(0.64);
+        top: -0.5rem;
+        right: -1.4rem;
+    }
+
+
+    /* index - сетка навыков */
+
+    .proficiency {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 0 3rem 0;
+        row-gap: 2rem;
+    }
+
+
+    /* index - ценности и навыки */
+
+    .principles-skills {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .principles-skills > div {
+        width: 100%;
+    }
+
+    
+    /* таблица */
+
+    .table-primary {
+        gap: 3rem;
+    }
+
+    .table-section {
+        gap: 3rem;
+    }
+
+    .table-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .table-row li {
+        width: 100%;
+    }
+}
