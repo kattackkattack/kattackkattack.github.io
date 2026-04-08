@@ -188,6 +188,12 @@ p {
     letter-spacing: 0.25%;
 }
 
+.nav-back {
+    padding-top: 2.5rem;
+    position: fixed;
+    top: 0;
+}
+
 .hero-text {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
@@ -198,6 +204,20 @@ p {
         "wdth" 400,
         "YTLC" 0;
     font-size: 2rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 0.5%;
+}
+
+.page-hero-text {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.75rem;
     line-height: 140%; /* 140% */
     letter-spacing: 0.5%;
 }
@@ -272,6 +292,11 @@ a:hover {
     color: var(--text-primary);
 }
 
+.page-link-back {
+    color: var(--text-primary);
+    opacity: 0.5;
+}
+
 
 /* hr */
 
@@ -337,6 +362,15 @@ a:hover {
     padding-top: 10rem;
 }
 
+.page-hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 840px;
+    gap: 16px;
+    margin-bottom: 12.5rem;
+    padding-top: 10.875rem;
+}
+
 
 
 
@@ -351,6 +385,33 @@ a:hover {
 
 article {
     margin-bottom: 10rem;
+}
+
+
+/* описание */
+
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 3rem;
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+
+.cell-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cell-list li {
+    padding-right: 2.5rem;
 }
 
 
@@ -373,7 +434,7 @@ article {
 
 /* index - ценности и навыки */
 
-.principles-skills {
+.table-secondary {
     display: flex;
     flex-direction: row;
 }
@@ -386,7 +447,7 @@ article {
     margin-bottom: 1.188rem;
 }
     
-.principles-skills > div {
+.table-secondary > div {
     width: 50%;
 }
 
@@ -416,6 +477,30 @@ article {
 .connection {
     margin: 0;
     padding-bottom: 10rem;
+}
+
+
+/* контейнер с экранами */
+
+.alf-screenshots {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+    background-color: blanchedalmond;"
+}
+
+.alf-screenshots img {
+width: 100%;
+}
+
+
+/* блок с описанием */
+
+.description-container-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 
@@ -450,6 +535,7 @@ article {
     flex-wrap: wrap;
     gap: 0.5rem;
     width: 50%;
+    padding-right: 2.5rem;
     list-style-type: none;
 }
 
@@ -461,11 +547,15 @@ article {
     gap: 1rem;
 }
 
-.table-row li:not(:last-child) {
-    padding-right: 2.5rem;
+.table-row li:last-child {
+    padding-right: 0;
 }
 
+/* таблица в описании */
 
+.description-container + .table-primary {
+    margin-top: 6rem;
+}
 
 
 
@@ -561,12 +651,12 @@ article {
 
     /* index - ценности и навыки */
 
-    .principles-skills {
+    .table-secondary {
         flex-direction: column;
         gap: 2.5rem;
     }
 
-    .principles-skills > div {
+    .table-secondary > div {
         width: 100%;
     }
 
