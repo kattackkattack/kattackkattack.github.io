@@ -194,6 +194,14 @@ p {
     top: 0;
 }
 
+.nav-back a,
+.nav-back a:visited,
+.nav-back a:hover,
+.nav-back a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .hero-text {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
@@ -266,6 +274,14 @@ a:hover {
 
 /* link primary */
 
+.link-primary-anchor,
+.link-primary-anchor:visited,
+.link-primary-anchor:hover,
+.link-primary-anchor:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .link-primary {
     display: flex;
     align-items: center;
@@ -295,6 +311,7 @@ a:hover {
 .page-link-back {
     color: var(--text-primary);
     opacity: 0.5;
+    text-decoration: none;
 }
 
 
@@ -308,28 +325,7 @@ a:hover {
 }
 
 
-/* index - stripes 
 
-.background-stripes {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    padding: 0 5rem;
-}
-
-
-.background-stripes div {
-    background-color: var(--border-stripes);
-    width: 1px;
-    height: 100%;
-}
-*/
 
 /* index - hero */
 
@@ -388,6 +384,26 @@ article {
 }
 
 
+/* списки */
+
+.text-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0;
+    padding-left: 2.25rem;
+}
+
+.text-list > li {
+    display: list-item;
+    list-style-type: disc;
+    padding-right: 0;
+}
+
+.text-list > li::marker {
+    content: "●  ";
+}
+
+
 /* описание */
 
 
@@ -410,9 +426,6 @@ article {
     list-style-type: none;
 }
 
-.cell-list li {
-    padding-right: 2.5rem;
-}
 
 
 /* index - сетка навыков */
@@ -565,6 +578,23 @@ article {
     padding-right: 0;
 }
 
+.table-row .text-list {
+    padding-left: 1.75rem;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.table-row .text-list > li {
+    display: list-item;
+    list-style-type: disc;
+    width: auto;
+    padding-right: 0;
+}
+
+.table-row .text-list > li::marker {
+    content: "●  ";
+}
+
 /* таблица в описании */
 
 .description-container + .table-primary {
@@ -588,6 +618,14 @@ article {
     .proficiency {
     grid-template-columns: repeat(2, 1fr);
     }
+
+    /* описание */
+
+    .description-container {
+    margin-top: 7rem;
+    gap: 2.5rem;
+    max-width: 75%;
+    }
 }
 
 
@@ -607,11 +645,20 @@ article {
         font-size: 3.2rem;
     }
 
+    h2 {
+    font-size: 2.5rem;
+    }
+
+
     h3 {
         font-size: 2rem;
     }
     
     .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .page-hero-text {
         font-size: 1.5rem;
     }
 
@@ -628,6 +675,19 @@ article {
 
     article {
         margin-bottom: 7rem;
+    }
+
+
+
+    /* описание */
+
+    .description-container {
+        margin-top: 7rem;
+        max-width: 100%;
+    }
+
+    .cell-list li {
+        padding-right: 2.5rem;
     }
 
 
@@ -654,6 +714,15 @@ article {
     }
 
 
+    /* page hero */
+
+    .page-hero {
+        margin-bottom: 10rem;
+        padding-top: 8.5rem;
+    }
+
+
+
     /* index - сетка навыков */
 
     .proficiency {
@@ -673,6 +742,9 @@ article {
     .table-secondary > div {
         width: 100%;
     }
+
+
+
 
     
     /* таблица */
