@@ -37,7 +37,7 @@ body {
     height: auto;
     min-height: 100vh;
     margin: auto;
-    padding: 0 5rem 10rem 5rem;
+    padding: 0 5rem;
 }
 
 
@@ -81,9 +81,6 @@ body {
     --border-primary: rgba(255, 255, 255, 0.5);
     --border-tertiary: rgba(255, 255, 255, 0.1);
     --border-stripes: rgba(255, 255, 255, 0.05);
-
-    /* shadow */
-
 }
 
 
@@ -112,12 +109,12 @@ h2 {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 700;
     font-style: normal;
     font-variation-settings:
-        "wdth" 800,
+        "wdth" 700,
         "YTLC" 0;
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     line-height: 140%; /* 140% */
     letter-spacing: 0.25%;
 }
@@ -133,7 +130,6 @@ h3 {
         "YTLC" 0;
     font-size: 2.5rem;
     line-height: 140%; /* 140% */
-    letter-spacing: 0.5%;
 }
 
 h4 {
@@ -147,7 +143,6 @@ h4 {
         "YTLC" 0;
     font-size: 1.25rem;
     line-height: 140%; /* 140% */
-    letter-spacing: 1%;
 }
 
 .text-secondary-style {
@@ -193,20 +188,6 @@ p {
     letter-spacing: 0.25%;
 }
 
-.nav-back {
-    padding-top: 2.5rem;
-    position: fixed;
-    top: 0;
-}
-
-.nav-back a,
-.nav-back a:visited,
-.nav-back a:hover,
-.nav-back a:active {
-    color: inherit;
-    text-decoration: none;
-}
-
 .hero-text {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
@@ -217,20 +198,6 @@ p {
         "wdth" 400,
         "YTLC" 0;
     font-size: 2rem;
-    line-height: 140%; /* 140% */
-    letter-spacing: 0.5%;
-}
-
-.page-hero-text {
-    margin: 0;
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 400,
-        "YTLC" 0;
-    font-size: 1.75rem;
     line-height: 140%; /* 140% */
     letter-spacing: 0.5%;
 }
@@ -279,14 +246,6 @@ a:hover {
 
 /* link primary */
 
-.link-primary-anchor,
-.link-primary-anchor:visited,
-.link-primary-anchor:hover,
-.link-primary-anchor:active {
-    color: inherit;
-    text-decoration: none;
-}
-
 .link-primary {
     display: flex;
     align-items: center;
@@ -313,12 +272,6 @@ a:hover {
     color: var(--text-primary);
 }
 
-.page-link-back {
-    color: var(--text-primary);
-    opacity: 0.5;
-    text-decoration: none;
-}
-
 
 /* hr */
 
@@ -330,7 +283,28 @@ a:hover {
 }
 
 
+/* index - stripes 
 
+.background-stripes {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    padding: 0 5rem;
+}
+
+
+.background-stripes div {
+    background-color: var(--border-stripes);
+    width: 1px;
+    height: 100%;
+}
+*/
 
 /* index - hero */
 
@@ -363,15 +337,6 @@ a:hover {
     padding-top: 10rem;
 }
 
-.page-hero {
-    display: flex;
-    flex-direction: column;
-    max-width: 840px;
-    gap: 16px;
-    margin-bottom: 12.5rem;
-    padding-top: 10.875rem;
-}
-
 
 
 
@@ -387,51 +352,6 @@ a:hover {
 article {
     margin-bottom: 10rem;
 }
-
-
-/* списки */
-
-.text-list {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin: 0;
-    padding-left: 2.25rem;
-}
-
-.text-list > li {
-    display: list-item;
-    list-style-type: disc;
-    padding-right: 0;
-}
-
-.text-list > li::marker {
-    content: "●  ";
-}
-
-
-/* описание */
-
-
-.description-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    gap: 3rem;
-    margin-top: 10rem;
-    margin-bottom: 0;
-    padding-right: 2.5rem;
-}
-
-.cell-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
 
 
 /* index - сетка навыков */
@@ -453,7 +373,7 @@ article {
 
 /* index - ценности и навыки */
 
-.table-secondary {
+.principles-skills {
     display: flex;
     flex-direction: row;
 }
@@ -466,7 +386,7 @@ article {
     margin-bottom: 1.188rem;
 }
     
-.table-secondary > div {
+.principles-skills > div {
     width: 50%;
 }
 
@@ -494,46 +414,8 @@ article {
 }
 
 .connection {
-    margin-bottom: 0;
-}
-
-
-
-/* контейнер с экранами */
-
-.alf-screenshots {
-    margin-top: 3rem;
-    width: 100%;
-    overflow: visible;
-}
-
-.screenshots-track {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
-}
-
-.alf-screenshots img {
-    flex: 1 0 16.25rem;
-    min-width: 16.25rem;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 1.5rem;
-}
-
-
-/* блок с описанием */
-
-.description-container-secondary {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    margin: 0;
+    padding-bottom: 10rem;
 }
 
 
@@ -568,7 +450,6 @@ article {
     flex-wrap: wrap;
     gap: 0.5rem;
     width: 50%;
-    padding-right: 2.5rem;
     list-style-type: none;
 }
 
@@ -577,82 +458,14 @@ article {
 }
 
 .table-row .table-cell-list {
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.table-row li:last-child {
-    padding-right: 0;
-}
-
-.table-row .text-list {
-    padding-left: 1.75rem;
-    list-style-type: disc;
-    list-style-position: outside;
-}
-
-.table-row .text-list > li {
-    display: list-item;
-    list-style-type: disc;
-    width: auto;
-    padding-right: 0;
-}
-
-.table-row .text-list > li::marker {
-    content: "●  ";
+.table-row li:not(:last-child) {
+    padding-right: 2.5rem;
 }
 
 
-
-.table-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
-}
-
-
-
-
-/* таблица в описании */
-
-.description-container + .table-primary {
-    margin-top: 6rem;
-}
-
-
-
-
-/* мокапы */
-
-.case-mockup {
-    width: 100%;
-    max-width: 19rem;
-    object-fit: contain;
-    border-radius: 2.25rem;
-}
-
-li .case-mockup-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 0;
-    padding: 0 2.5rem;
-}
-
-.mockup-description {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0rem;
-    margin-bottom: 0;
-    justify-content: center;
-}
-
-li .mockup-description {
-    gap: 3rem;
-}
 
 
 
@@ -670,30 +483,6 @@ li .mockup-description {
 
     .proficiency {
     grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* описание */
-
-    .description-container {
-    margin-top: 7rem;
-    gap: 3rem;
-    max-width: 75%;
-    }
-
-
-
-    .mockup-description {
-    max-width: 75%;
-
-    }
-
-    .table-case-row {
-        flex-direction: column;
-        gap: 6rem;
-    }
-
-    .table-case-row li {
-    width: 100%;
     }
 }
 
@@ -714,20 +503,11 @@ li .mockup-description {
         font-size: 3.2rem;
     }
 
-    h2 {
-    font-size: 2.75rem;
-    }
-
-
     h3 {
         font-size: 2rem;
     }
     
     .hero-text {
-        font-size: 1.5rem;
-    }
-
-    .page-hero-text {
         font-size: 1.5rem;
     }
 
@@ -739,31 +519,13 @@ li .mockup-description {
     /* главный контейнер */
 
     .page-content-container {
-        padding: 0 2rem ;
-        margin-bottom: 7rem;
+        padding: 0 2rem;
     }
 
     article {
         margin-bottom: 7rem;
     }
 
-
-
-    /* описание */
-
-    .description-container {
-        max-width: 100%;
-        padding-right: 0;
-        gap: 2.5rem;
-    }
-
-    .mockup-description {
-    max-width: 100%;
-    }
-
-    li .mockup-description {
-    gap: 1.5rem;
-}
 
     /* полосы на фоне */
 
@@ -788,15 +550,6 @@ li .mockup-description {
     }
 
 
-    /* page hero */
-
-    .page-hero {
-        margin-bottom: 10rem;
-        padding-top: 8.5rem;
-    }
-
-
-
     /* index - сетка навыков */
 
     .proficiency {
@@ -805,43 +558,23 @@ li .mockup-description {
         row-gap: 2rem;
     }
 
-    .proficiency p {
-    text-wrap: balance;
-    padding-right: 0;
-    }
-
-    .principles {
-    padding-right: 0;
-}
-
 
     /* index - ценности и навыки */
 
-    .table-secondary {
+    .principles-skills {
         flex-direction: column;
         gap: 2.5rem;
     }
 
-    .table-secondary > div {
+    .principles-skills > div {
         width: 100%;
     }
-
-    .table-row li:last-child {
-        padding-right: 0;
-    }
-
-
-
 
     
     /* таблица */
 
     .table-primary {
         gap: 3rem;
-    }
-
-    .description-container + .table-primary {
-    margin-top: 3rem;
     }
 
     .table-section {
@@ -856,35 +589,4 @@ li .mockup-description {
     .table-row li {
         width: 100%;
     }
-
-    .table-case-row {
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    .table-row .table-cell-list {
-    gap: 1rem;
-}
-
-    .table-visible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
-}
-
-
-.table-hidden {
-    position:relative;
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-.table-header {
-    gap: 3rem;
-}
-
-
 }
