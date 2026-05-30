@@ -63,12 +63,20 @@ body {
   
     --background-primary: #141415;
     --background-tertiary:rgba(255, 255, 255, 0.05);
+    --background-tertiary:rgba(56, 56, 56, 1);
+    --background-inverse-primary: rgba(255, 255, 255, 1);
+    --background-tab: rgba(32, 32, 32, 1);
      
 
     /* text */
   
     --text-primary:#ffffff;
     --text-secondary:rgba(255, 255, 255, 0.5);
+
+    /* text-inverse */
+    
+    --text-primary-inverse: rgba(0, 0, 0, 0.8);
+    --text-secondary-inverse: rgba(0, 0, 0, 0.5);
   
 
     /* icon */
@@ -78,11 +86,14 @@ body {
 
     /* border */
     
-    --border-primary: rgba(255, 255, 255, 0.5);
+    --border-primary: rgba(255, 255, 255, 0.6);
     --border-tertiary: rgba(255, 255, 255, 0.1);
     --border-stripes: rgba(255, 255, 255, 0.05);
 
-    /* shadow */
+    /* ozon-seller-concept */
+
+    --seller-example-background-dark: rgba(56, 56, 56, 1);
+    --seller-example-background-light: rgba(232, 234, 237, 1);
 
 }
 
@@ -150,7 +161,21 @@ h4 {
     letter-spacing: 1%;
 }
 
-.text-secondary-style {
+p {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem; /* 140% */
+    letter-spacing: 1%;
+}
+
+.text-secondary {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
@@ -165,7 +190,7 @@ h4 {
     color: var(--text-secondary);
 }
 
-p {
+.text-primary-inverse {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
@@ -175,9 +200,41 @@ p {
         "wdth" 400,
         "YTLC" 0;
     font-size: 1.25rem;
-    line-height: 1.75rem; /* 140% */
+    line-height: 140%; /* 140% */
     letter-spacing: 1%;
+    color: var(--text-primary-inverse);
 }
+
+.text-secondary-inverse {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1.25rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 1%;
+    color: var(--text-secondary-inverse);
+}
+
+.text-caption-inverse {
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 400,
+        "YTLC" 0;
+    font-size: 1rem;
+    line-height: 140%; /* 140% */
+    letter-spacing: 1%;
+    color: var(--text-secondary-inverse);
+}
+
 
 .h1-special {
     margin: 0;
@@ -361,6 +418,7 @@ a:hover {
     gap: 26px;
     margin-bottom: 13.5rem;
     padding-top: 10rem;
+    transition-duration: 0;
 }
 
 .page-hero {
@@ -409,8 +467,111 @@ article {
 }
 
 
-/* описание */
+/* табы */
 
+.tab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    background-color: var(--background-tab);
+    border: none;
+    border-radius: 1.25rem;
+}
+
+.tab-btn.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    background-color: var(--background-tab);
+    border: solid 1px var(--border-primary);
+    border-radius: 1.25rem;
+}
+
+.tab-btn svg {
+    opacity: 0.6;
+}
+
+.tab-btn.active svg {
+    opacity: 1;
+}
+
+.tab-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+
+/* галерея */
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.carousel.seller-layout {
+    margin-top: 6rem;
+}
+
+
+/* галерея в seller-layout */
+
+.carousel-example.dark {
+    background-color: var(--seller-example-background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.25rem 2.25rem 5rem 2.25rem;
+    border-radius: 3rem;
+}
+
+.carousel-example.light {
+    background-color: var(--seller-example-background-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.25rem 2.25rem 5rem 2.25rem;
+    border-radius: 3rem;
+}
+
+.seller-layout-concept-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.seller-layout-concept-text p {
+    text-align: center;
+}
+
+.seller-layout-designers {
+    gap: 0;
+}
+
+
+/* описание */
 
 .description-container {
     display: flex;
@@ -431,7 +592,6 @@ article {
     padding: 0;
     list-style-type: none;
 }
-
 
 
 /* index - сетка навыков */
@@ -458,11 +618,11 @@ article {
     flex-direction: row;
 }
 
-.principles .text-secondary-style {
+.principles .text-secondary {
     margin-bottom: 1.5rem;
 }
 
-.skills .text-secondary-style {
+.skills .text-secondary {
     margin-bottom: 1.188rem;
 }
     
@@ -528,6 +688,36 @@ article {
 }
 
 
+
+/* изображения с примерами */
+
+.case-example {
+    background-color: var(--background-inverse-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 2.25rem 2.25rem 1.75rem 2.25rem;
+    border-radius: 3rem;
+}
+
+.example-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.example-images img {
+    flex: 1 0 16.25rem;
+    min-width: 16.25rem;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
 /* блок с описанием */
 
 .description-container-secondary {
@@ -535,6 +725,7 @@ article {
     flex-direction: column;
     gap: 1.5rem;
 }
+
 
 
 /* таблица */
@@ -559,7 +750,6 @@ article {
     flex-direction: row;
     margin: 0;
     padding: 0;
-
 }
 
 .table-row li {
@@ -577,7 +767,7 @@ article {
 }
 
 .table-row .table-cell-list {
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .table-row li:last-child {
@@ -601,8 +791,6 @@ article {
     content: "●  ";
 }
 
-
-
 .table-hidden {
     position: absolute;
     width: 1px;
@@ -613,13 +801,11 @@ article {
 
 
 
-
 /* таблица в описании */
 
 .description-container + .table-primary {
     margin-top: 6rem;
 }
-
 
 
 
@@ -832,6 +1018,28 @@ li .mockup-description {
 
 
 
+    /* изображение с примерами */
+
+    .case-example {
+    gap: 1.75rem;
+    padding: 2.25rem 2.25rem 1.75rem 2.25rem;
+    border-radius: 1.5rem;
+    }
+
+
+    /* галерея в seller-layout */
+
+    .carousel-example.dark {
+    gap: 3rem;
+    padding: 1.25rem 1.25rem 3rem 1.25rem;
+    border-radius: 1.5rem;
+    }
+
+    .carousel-example.light {
+    gap: 3rem;
+    padding: 1.25rem 1.25rem 3rem 1.25rem;
+    border-radius: 1.5rem;
+    }
 
     
     /* таблица */
@@ -874,6 +1082,9 @@ li .mockup-description {
     clip: rect(0 0 0 0);
 }
 
+.table-header-text {
+    padding-bottom: 0.5rem;
+}
 
 .table-hidden {
     position:relative;
