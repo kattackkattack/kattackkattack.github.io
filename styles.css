@@ -62,8 +62,7 @@ body {
     /* background */
   
     --background-primary: #141415;
-    --background-tertiary:rgba(255, 255, 255, 0.05);
-    --background-tertiary:rgba(56, 56, 56, 1);
+    --background-tertiary:rgba(32, 32, 32, 1);
     --background-inverse-primary: rgba(255, 255, 255, 1);
     --background-tab: rgba(32, 32, 32, 1);
      
